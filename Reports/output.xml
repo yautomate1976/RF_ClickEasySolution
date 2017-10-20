@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171012 22:32:39.339" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\dev\GitHub\RobotFramework\ClickEasySolution\Pages\Login.robot" id="s1" name="Login">
+<test id="s1-t1" name="Book A One Way Flight">
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20171012 22:32:39.621" level="INFO">Opening browser 'chrome' to base url 'http://easytravel.solutions/'</msg>
+<status status="PASS" endtime="20171012 22:32:54.313" starttime="20171012 22:32:39.620"></status>
+</kw>
+<kw name="Select From List By Value" library="ExtendedSelenium2Library">
+<doc>Selects ``*values`` from list identified by ``locator``.</doc>
+<arguments>
+<arg>${FROM}</arg>
+<arg>Agra</arg>
+</arguments>
+<msg timestamp="20171012 22:32:54.314" level="INFO">Selecting value(s) 'Agra' from list '//*[@id="FromSector"]'.</msg>
+<kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171012 22:33:10.071" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20171012 22:33:10.071" starttime="20171012 22:33:09.370"></status>
+</kw>
+<msg timestamp="20171012 22:33:10.074" level="FAIL">ValueError: Element locator '//*[@id="FromSector"]' did not match any elements.</msg>
+<status status="FAIL" endtime="20171012 22:33:10.074" starttime="20171012 22:32:54.314"></status>
+</kw>
+<status status="FAIL" endtime="20171012 22:33:10.075" critical="yes" starttime="20171012 22:32:39.619">ValueError: Element locator '//*[@id="FromSector"]' did not match any elements.</status>
+</test>
+<status status="FAIL" endtime="20171012 22:33:10.078" starttime="20171012 22:32:39.344"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Login" pass="0">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

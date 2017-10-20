@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20171019 18:50:02.187" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\dev\GitHub\RobotFramework\ClickEasySolution\Pages\Login.robot" id="s1" name="Login">
+<test id="s1-t1" name="Book a One WAy Flight">
+<kw name="Launch Easy Click Travel">
+<doc>Present some information about this test case</doc>
+<kw name="Open Browser" library="ExtendedSelenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.easyclicktravel.com/</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20171019 18:50:03.403" level="INFO">Opening browser 'chrome' to base url 'http://www.easyclicktravel.com/'</msg>
+<status status="PASS" endtime="20171019 18:50:14.605" starttime="20171019 18:50:03.403"></status>
+</kw>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171019 18:50:15.742" starttime="20171019 18:50:14.606"></status>
+</kw>
+<status status="PASS" endtime="20171019 18:50:15.742" starttime="20171019 18:50:03.403"></status>
+</kw>
+<kw name="I want a">
+<arguments>
+<arg>Flight</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${option}" == "Flight"</arg>
+<arg>log to console</arg>
+<arg>hello world</arg>
+</arguments>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>hello world</arg>
+</arguments>
+<status status="PASS" endtime="20171019 18:50:15.745" starttime="20171019 18:50:15.744"></status>
+</kw>
+<status status="PASS" endtime="20171019 18:50:15.745" starttime="20171019 18:50:15.744"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" endtime="20171019 18:50:15.745" starttime="20171019 18:50:15.745"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${flights}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 18:50:15.797" starttime="20171019 18:50:15.745"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${flights}</arg>
+</arguments>
+<msg timestamp="20171019 18:50:15.797" level="INFO">Clicking element 'xpath=//*[@id="TGS_sb_fImg"]'.</msg>
+<status status="PASS" endtime="20171019 18:50:16.474" starttime="20171019 18:50:15.797"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${option}" == "Hotels"</arg>
+<arg>log to console</arg>
+<arg>hello world</arg>
+</arguments>
+<status status="PASS" endtime="20171019 18:50:16.474" starttime="20171019 18:50:16.474"></status>
+</kw>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" endtime="20171019 18:50:16.474" starttime="20171019 18:50:16.474"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${flights}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 18:50:16.505" starttime="20171019 18:50:16.474"></status>
+</kw>
+<status status="PASS" endtime="20171019 18:50:16.505" starttime="20171019 18:50:15.743"></status>
+</kw>
+<status status="PASS" endtime="20171019 18:50:16.505" critical="yes" starttime="20171019 18:50:03.403"></status>
+</test>
+<status status="PASS" endtime="20171019 18:50:16.505" starttime="20171019 18:50:02.187"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Login" pass="1">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
