@@ -1,44 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20171012 22:32:39.339" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
-<suite source="C:\dev\GitHub\RobotFramework\ClickEasySolution\Pages\Login.robot" id="s1" name="Login">
-<test id="s1-t1" name="Book A One Way Flight">
+<robot generated="20171019 23:48:50.719" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\dev\GitHub\RobotFramework\RF_ClickEasySolution\Pages\Home.robot" id="s1" name="Home">
+<test id="s1-t1" name="Book a One WAy Flight">
+<kw name="Launch Easy Click Travel">
+<doc>Present some information about this test case</doc>
 <kw name="Open Browser" library="ExtendedSelenium2Library">
 <doc>Opens a new browser instance to given URL.</doc>
 <arguments>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>http://www.easyclicktravel.com/</arg>
+<arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20171012 22:32:39.621" level="INFO">Opening browser 'chrome' to base url 'http://easytravel.solutions/'</msg>
-<status status="PASS" endtime="20171012 22:32:54.313" starttime="20171012 22:32:39.620"></status>
+<msg timestamp="20171019 23:48:50.935" level="INFO">Opening browser 'chrome' to base url 'http://www.easyclicktravel.com/'</msg>
+<status status="PASS" endtime="20171019 23:49:01.175" starttime="20171019 23:48:50.935"></status>
 </kw>
-<kw name="Select From List By Value" library="ExtendedSelenium2Library">
-<doc>Selects ``*values`` from list identified by ``locator``.</doc>
+<kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20171019 23:49:02.312" starttime="20171019 23:49:01.175"></status>
+</kw>
+<status status="PASS" endtime="20171019 23:49:02.312" starttime="20171019 23:48:50.935"></status>
+</kw>
+<kw name="I want a">
 <arguments>
-<arg>${FROM}</arg>
-<arg>Agra</arg>
+<arg>Flight</arg>
 </arguments>
-<msg timestamp="20171012 22:32:54.314" level="INFO">Selecting value(s) 'Agra' from list '//*[@id="FromSector"]'.</msg>
-<kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<msg timestamp="20171012 22:33:10.071" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20171012 22:33:10.071" starttime="20171012 22:33:09.370"></status>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${option}' == 'Flight'</arg>
+<arg>run keywords</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" endtime="20171019 23:49:02.312" starttime="20171019 23:49:02.312"></status>
 </kw>
-<msg timestamp="20171012 22:33:10.074" level="FAIL">ValueError: Element locator '//*[@id="FromSector"]' did not match any elements.</msg>
-<status status="FAIL" endtime="20171012 22:33:10.074" starttime="20171012 22:32:54.314"></status>
+<status status="PASS" endtime="20171019 23:49:02.312" starttime="20171019 23:49:02.312"></status>
 </kw>
-<status status="FAIL" endtime="20171012 22:33:10.075" critical="yes" starttime="20171012 22:32:39.619">ValueError: Element locator '//*[@id="FromSector"]' did not match any elements.</status>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${rbn_flights}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:02.369" starttime="20171019 23:49:02.312"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${rbn_flights}</arg>
+</arguments>
+<msg timestamp="20171019 23:49:02.369" level="INFO">Clicking element 'xpath=//*[@id="TGS_sb_fImg"]'.</msg>
+<status status="PASS" endtime="20171019 23:49:02.996" starttime="20171019 23:49:02.369"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${option}" == "Hotels"</arg>
+<arg>run keywords</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:02.996" starttime="20171019 23:49:02.996"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${rbn_hotels}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:03.043" starttime="20171019 23:49:02.996"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${rbn_hotels}</arg>
+</arguments>
+<msg timestamp="20171019 23:49:03.043" level="INFO">Clicking element 'xpath=//*[@id="td_TGS_sb_hImg"]'.</msg>
+<status status="PASS" endtime="20171019 23:49:03.659" starttime="20171019 23:49:03.043"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${option}" == "Flight + Hotel + Car"</arg>
+<arg>run keywords</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:03.659" starttime="20171019 23:49:03.659"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${rbn_flight_hotel_car}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:03.713" starttime="20171019 23:49:03.659"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${rbn_hotels}</arg>
+</arguments>
+<msg timestamp="20171019 23:49:03.713" level="INFO">Clicking element 'xpath=//*[@id="td_TGS_sb_hImg"]'.</msg>
+<status status="PASS" endtime="20171019 23:49:04.298" starttime="20171019 23:49:03.713"></status>
+</kw>
+<status status="PASS" endtime="20171019 23:49:04.298" starttime="20171019 23:49:02.312"></status>
+</kw>
+<kw name="I want a">
+<arguments>
+<arg>Flight + Hotel + Car</arg>
+</arguments>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${option}' == 'Flight'</arg>
+<arg>run keywords</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:04.298" starttime="20171019 23:49:04.298"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${rbn_flights}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:04.329" starttime="20171019 23:49:04.298"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${rbn_flights}</arg>
+</arguments>
+<msg timestamp="20171019 23:49:04.329" level="INFO">Clicking element 'xpath=//*[@id="TGS_sb_fImg"]'.</msg>
+<status status="PASS" endtime="20171019 23:49:04.915" starttime="20171019 23:49:04.329"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${option}" == "Hotels"</arg>
+<arg>run keywords</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:04.915" starttime="20171019 23:49:04.915"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${rbn_hotels}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:04.930" starttime="20171019 23:49:04.915"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${rbn_hotels}</arg>
+</arguments>
+<msg timestamp="20171019 23:49:04.930" level="INFO">Clicking element 'xpath=//*[@id="td_TGS_sb_hImg"]'.</msg>
+<status status="PASS" endtime="20171019 23:49:05.530" starttime="20171019 23:49:04.930"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${option}" == "Flight + Hotel + Car"</arg>
+<arg>run keywords</arg>
+</arguments>
+<kw name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" endtime="20171019 23:49:05.530" starttime="20171019 23:49:05.530"></status>
+</kw>
+<status status="PASS" endtime="20171019 23:49:05.530" starttime="20171019 23:49:05.530"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>${rbn_flight_hotel_car}</arg>
+</arguments>
+<status status="PASS" endtime="20171019 23:49:05.546" starttime="20171019 23:49:05.530"></status>
+</kw>
+<kw name="Click Element" library="ExtendedSelenium2Library">
+<doc>Clicks an element identified by ``locator``.</doc>
+<arguments>
+<arg>${rbn_hotels}</arg>
+</arguments>
+<msg timestamp="20171019 23:49:05.546" level="INFO">Clicking element 'xpath=//*[@id="td_TGS_sb_hImg"]'.</msg>
+<status status="PASS" endtime="20171019 23:49:06.103" starttime="20171019 23:49:05.546"></status>
+</kw>
+<status status="PASS" endtime="20171019 23:49:06.103" starttime="20171019 23:49:04.298"></status>
+</kw>
+<status status="PASS" endtime="20171019 23:49:06.119" critical="yes" starttime="20171019 23:48:50.935"></status>
 </test>
-<status status="FAIL" endtime="20171012 22:33:10.078" starttime="20171012 22:32:39.344"></status>
+<status status="PASS" endtime="20171019 23:49:06.119" starttime="20171019 23:48:50.719"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Login" pass="0">Login</stat>
+<stat fail="0" id="s1" name="Home" pass="1">Home</stat>
 </suite>
 </statistics>
 <errors>

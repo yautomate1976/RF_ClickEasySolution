@@ -34,6 +34,19 @@ ${btn_search_flight_hotel}  xpath=//*[@id="TGS_f_butSearch"]
 Book a One WAy Flight
     Launch Easy Click Travel
     I want a    Flight
+    I want a package   Flight + Hotel + Car
+    I am departing from  DFW
+    I am returning to   LAX
+    I want to leave at
+    I am returning on
+    I want to return from
+    The number of adults are
+    The number of children are
+    I prefer non-stop
+    I want airline
+    I want class
+    Search for my flight
+
 
 *** Keywords ***
 
@@ -44,18 +57,41 @@ Launch Easy Click Travel
 
 I want a
     [Arguments]  ${option}
+    run keyword if  '${option}' == 'Flight'     run keywords
+        wait until element is visible  ${rbn_flights}
+        click element  ${rbn_flights}
 
-    run keyword if  "${option}" == "Flight"
-            run keywords
-            wait until element is visible  ${rbn_flights}
-            click element  ${rbn_flights}
+    run keyword if  "${option}" == "Hotels"     run keywords
+        wait until element is visible  ${rbn_hotels}
+        click element  ${rbn_hotels}
 
-    run keyword if  "${option}" == "Hotels"
-            run keywords
-            wait until element is visible  ${rbn_hotels}
-            click element  ${rbn_hotels}
+I want a package
+    [Arguments]  ${package}
+    run keyword if  "${package}" == "Flight + Hotel + Car"     run keywords
+        wait until element is visible  ${rbn_flight_hotel_car}
+        click element  ${rbn_flight_hotel_car}
+
+I am departing from
+    [Arguments]  ${from}
+        wait until element is visible  ${tbx_from}
+        click element  ${tbx_from}
+        input text  ${tbx_from} ${from}
+        press key  ${tbx_from}  \\09
+
+I am returning to
+    [Arguments]  ${to}
+        wait until element is visible  ${tbx_to}
+        click element  ${tbx_to}
+        input text  ${tbx_to} ${to}
+        press key  ${tbx_to}  \\09
 
 
-
+I want to leave at
+    [Arguments]  ${time_range}
+        wait until element is visible  ${lst_departure}
+        @{my_list}=     select all from list  ${lst_departure}
+        log to console  @{my_list}
+        select from list by value  ${lst_departure}  ${time_range}
+        press key  ${lst_departure}  \\09
 
 
