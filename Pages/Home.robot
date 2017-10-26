@@ -29,22 +29,30 @@ ${lst_airline}  xpath=//*[@id="TGS_f_cmbAirlines"]
 ${lst_class}    xpath=//*[@id="TGS_f_cmbFlightClass"]
 ${btn_search_flight}    xpath=//*[@id="TGS_f_butSearch"]
 ${btn_search_flight_hotel}  xpath=//*[@id="TGS_f_butSearch"]
+${lst_cruise_length}    xpath=//*[@id="TGS_c_cmbCruiseLength"]
+
+
+${img_american}     xpath=//*[@id="matrixTD2"]/div/div[1]/table/tbody/tr/td/a/img
+${btn_submit}   xpath=//*[@id="EmailCaptureSubmitButton"]
+${img_flight_search_results}    xpath=//*[@id="imgHeaderImage"]
+${tbl_flight_search_results}    xpath=//*[@class="flight_matrix_table"]*/table/tbody
 
 *** Test Cases ***
 Book a Round Trip Flight
     Launch Easy Click Travel
     I want a    Flight
     I am departing from  DFW
-    I am returning to   LAX
-    I am departing on date   12/20/2017
-    I am returning on date   01/20/2018
+    I am returning to   CID
+    I am departing on date   01/02/2018
+    I am returning on date   02/02/2018
     The number of adults are    2
     The number of children are  2
     I prefer non-stop
     I want airline  American
-    I want class    Business Class
-    Search for my flight
-
+    I want class    Economy/Coach Class
+    Search for flight
+    # Book a flight
+    Select Airline  American
 
 *** Keywords ***
 
@@ -71,6 +79,8 @@ I am departing from
         click element  ${tbx_from}
         input text  ${tbx_from}     ${from}
         press key  ${tbx_from}  \\09
+       # ${element_value}=   get element attribute   ${tbx_from}@value
+       # log to console  ${element_value}
 
 I am returning to
     [Arguments]  ${to}
@@ -78,6 +88,8 @@ I am returning to
         click element  ${tbx_to}
         input text  ${tbx_to}   ${to}
         press key  ${tbx_to}  \\09
+       # ${element_value}=   get element attribute   ${tbx_to}@value
+       # log to console  ${element_value}
 
 I am departing on date
     [Arguments]  ${depature_date}
@@ -88,8 +100,8 @@ I am departing on date
 I am departing at
     [Arguments]  ${depature_time}
         wait until element is visible   ${lst_departure_time}
-        @{list_items}=  get list items  ${lst_departure_time}
-        log to console  @{list_items}
+        # @{list_items}=  get list items  ${lst_departure_time}
+        # log to console  @{list_items}
         select from list by value  ${lst_departure_time}    ${lst_departure_time}
 
 I am returning on date
@@ -101,15 +113,15 @@ I am returning on date
 The number of adults are
     [Arguments]  ${number_of_adults}
         wait until element is visible  ${lst_adults}
-         @{list_items}=  get list items  ${lst_adults}
-        log to console  '@{list_items}'
+        # @{list_items}=  get list items  ${lst_adults}
+        # log to console  '@{list_items}'
         select from list by value  ${lst_adults}    ${number_of_adults}
 
 The number of children are
     [Arguments]  ${number_of_children}
         wait until element is visible  ${lst_children}
-         @{list_items}=  get list items  ${lst_children}
-        log to console  '@{list_items}'
+        # @{list_items}=  get list items  ${lst_children}
+        # log to console  '@{list_items}'
         select from list by value  ${lst_children}    ${number_of_children}
 
 I prefer non-stop
@@ -117,19 +129,26 @@ I prefer non-stop
     select checkbox  ${cbx_non_stop}
 
 I want airline
-    [Arguments]  ${arline}
+    [Arguments]  ${airline_item}
     wait until element is visible  ${lst_airline}
-    @{list_items}=  get list items  ${lst_airline}
-    log to console  '@{list_items}'
-    select from list    ${lst_airline}    ${arline}
+    # @{list_items}=  get list items  ${lst_airline}
+    # log to console  '@{list_items}'
+    select from list    ${lst_airline}    ${airline_item}
 
 I want class
-    [Arguments]  ${class}
+    [Arguments]  ${class_item}
     wait until element is visible  ${lst_class}
-    @{list_items}=  get list items  ${lst_class}
-    log to console  '@{list_items}'
-    select from list  ${lst_class}    ${class}
+    # @{list_items}=  get list items  ${lst_class}
+    # log to console  '@{list_items}'
+    select from list  ${lst_class}    ${class_item}
 
-Search for my flight
+Search for flight
     wait until element is visible  ${btn_search_flight}
     click element  ${btn_search_flight}
+    wait until angular ready
+
+Select Airline
+    [Arguments]  ${airline_to_select}
+    ${number_of_rows}=  get matching xpath count    ${tbl_flight_search_results}
+    table row should contain    ${tbl_flight_search_results}    1   ${airline_to_select}
+    log to console  ${number_of_rows}

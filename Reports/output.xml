@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20171020 16:40:57.654" generator="Robot 3.0.2 (Python 2.7.14rc1 on win32)">
-<suite source="C:\Users\yshmaelr\Google Drive\dev\GitHub\RobotFramework\RF_ClickEasySolution\Pages\Home.robot" id="s1" name="Home">
+<robot generated="20171025 23:20:53.289" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\dev\GitHub\RobotFramework\RF_ClickEasySolution\pages\Home.robot" id="s1" name="Home">
 <test id="s1-t1" name="Book a Round Trip Flight">
 <kw name="Launch Easy Click Travel">
 <doc>Present some information about this test case</doc>
@@ -10,14 +10,14 @@
 <arg>http://www.easyclicktravel.com/</arg>
 <arg>${Browser}</arg>
 </arguments>
-<msg timestamp="20171020 16:40:57.810" level="INFO">Opening browser 'chrome' to base url 'http://www.easyclicktravel.com/'</msg>
-<status status="PASS" endtime="20171020 16:41:05.906" starttime="20171020 16:40:57.810"></status>
+<msg timestamp="20171025 23:20:53.529" level="INFO">Opening browser 'chrome' to base url 'http://www.easyclicktravel.com/'</msg>
+<status status="PASS" endtime="20171025 23:21:04.542" starttime="20171025 23:20:53.529"></status>
 </kw>
 <kw name="Maximize Browser Window" library="ExtendedSelenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20171020 16:41:07.106" starttime="20171020 16:41:05.906"></status>
+<status status="PASS" endtime="20171025 23:21:05.728" starttime="20171025 23:21:04.543"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:07.106" starttime="20171020 16:40:57.810"></status>
+<status status="PASS" endtime="20171025 23:21:05.728" starttime="20171025 23:20:53.528"></status>
 </kw>
 <kw name="I want a">
 <arguments>
@@ -31,26 +31,26 @@
 </arguments>
 <kw name="Run Keywords" library="BuiltIn">
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" endtime="20171020 16:41:07.108" starttime="20171020 16:41:07.108"></status>
+<status status="PASS" endtime="20171025 23:21:05.729" starttime="20171025 23:21:05.729"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:07.108" starttime="20171020 16:41:07.107"></status>
+<status status="PASS" endtime="20171025 23:21:05.729" starttime="20171025 23:21:05.729"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${rbn_flights}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:07.150" starttime="20171020 16:41:07.108"></status>
+<status status="PASS" endtime="20171025 23:21:05.785" starttime="20171025 23:21:05.730"></status>
 </kw>
 <kw name="Click Element" library="ExtendedSelenium2Library">
 <doc>Clicks an element identified by ``locator``.</doc>
 <arguments>
 <arg>${rbn_flights}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:07.151" level="INFO">Clicking element 'xpath=//*[@id="TGS_sb_fImg" and @name="TGS_tabButtons"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:07.758" starttime="20171020 16:41:07.150"></status>
+<msg timestamp="20171025 23:21:05.786" level="INFO">Clicking element 'xpath=//*[@id="TGS_sb_fImg" and @name="TGS_tabButtons"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:06.422" starttime="20171025 23:21:05.785"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:07.758" starttime="20171020 16:41:07.107"></status>
+<status status="PASS" endtime="20171025 23:21:06.422" starttime="20171025 23:21:05.728"></status>
 </kw>
 <kw name="I am departing from">
 <arguments>
@@ -61,15 +61,15 @@
 <arguments>
 <arg>${tbx_from}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:07.797" starttime="20171020 16:41:07.758"></status>
+<status status="PASS" endtime="20171025 23:21:06.491" starttime="20171025 23:21:06.422"></status>
 </kw>
 <kw name="Click Element" library="ExtendedSelenium2Library">
 <doc>Clicks an element identified by ``locator``.</doc>
 <arguments>
 <arg>${tbx_from}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:07.797" level="INFO">Clicking element 'xpath=//*[@id="TGS_f_txtFrom"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:08.414" starttime="20171020 16:41:07.797"></status>
+<msg timestamp="20171025 23:21:06.491" level="INFO">Clicking element 'xpath=//*[@id="TGS_f_txtFrom"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:07.149" starttime="20171025 23:21:06.491"></status>
 </kw>
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -77,8 +77,8 @@
 <arg>${tbx_from}</arg>
 <arg>${from}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:08.414" level="INFO">Typing text 'DFW' into text field 'xpath=//*[@id="TGS_f_txtFrom"]'</msg>
-<status status="PASS" endtime="20171020 16:41:08.620" starttime="20171020 16:41:08.414"></status>
+<msg timestamp="20171025 23:21:07.149" level="INFO">Typing text 'DFW' into text field 'xpath=//*[@id="TGS_f_txtFrom"]'</msg>
+<status status="PASS" endtime="20171025 23:21:07.404" starttime="20171025 23:21:07.149"></status>
 </kw>
 <kw name="Press Key" library="ExtendedSelenium2Library">
 <doc>Simulates user pressing key on element identified by `locator`.</doc>
@@ -86,28 +86,28 @@
 <arg>${tbx_from}</arg>
 <arg>\\09</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:08.657" starttime="20171020 16:41:08.620"></status>
+<status status="PASS" endtime="20171025 23:21:07.466" starttime="20171025 23:21:07.419"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:08.657" starttime="20171020 16:41:07.758"></status>
+<status status="PASS" endtime="20171025 23:21:07.466" starttime="20171025 23:21:06.422"></status>
 </kw>
 <kw name="I am returning to">
 <arguments>
-<arg>LAX</arg>
+<arg>CID</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${tbx_to}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:08.715" starttime="20171020 16:41:08.658"></status>
+<status status="PASS" endtime="20171025 23:21:07.517" starttime="20171025 23:21:07.467"></status>
 </kw>
 <kw name="Click Element" library="ExtendedSelenium2Library">
 <doc>Clicks an element identified by ``locator``.</doc>
 <arguments>
 <arg>${tbx_to}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:08.715" level="INFO">Clicking element 'xpath=//*[@id="TGS_f_txtTo"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:09.301" starttime="20171020 16:41:08.715"></status>
+<msg timestamp="20171025 23:21:07.517" level="INFO">Clicking element 'xpath=//*[@id="TGS_f_txtTo"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:08.144" starttime="20171025 23:21:07.517"></status>
 </kw>
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -115,8 +115,8 @@
 <arg>${tbx_to}</arg>
 <arg>${to}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:09.302" level="INFO">Typing text 'LAX' into text field 'xpath=//*[@id="TGS_f_txtTo"]'</msg>
-<status status="PASS" endtime="20171020 16:41:09.480" starttime="20171020 16:41:09.302"></status>
+<msg timestamp="20171025 23:21:08.144" level="INFO">Typing text 'CID' into text field 'xpath=//*[@id="TGS_f_txtTo"]'</msg>
+<status status="PASS" endtime="20171025 23:21:08.364" starttime="20171025 23:21:08.144"></status>
 </kw>
 <kw name="Press Key" library="ExtendedSelenium2Library">
 <doc>Simulates user pressing key on element identified by `locator`.</doc>
@@ -124,20 +124,20 @@
 <arg>${tbx_to}</arg>
 <arg>\\09</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:09.513" starttime="20171020 16:41:09.480"></status>
+<status status="PASS" endtime="20171025 23:21:08.422" starttime="20171025 23:21:08.364"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:09.514" starttime="20171020 16:41:08.658"></status>
+<status status="PASS" endtime="20171025 23:21:08.422" starttime="20171025 23:21:07.467"></status>
 </kw>
 <kw name="I am departing on date">
 <arguments>
-<arg>12/20/2017</arg>
+<arg>01/02/2018</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${tbx_departure_date}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:09.551" starttime="20171020 16:41:09.515"></status>
+<status status="PASS" endtime="20171025 23:21:08.468" starttime="20171025 23:21:08.423"></status>
 </kw>
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -145,8 +145,8 @@
 <arg>${tbx_departure_date}</arg>
 <arg>${depature_date}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:09.551" level="INFO">Typing text '12/20/2017' into text field 'xpath=//*[@id="TGS_f_departDate"]'</msg>
-<status status="PASS" endtime="20171020 16:41:09.940" starttime="20171020 16:41:09.551"></status>
+<msg timestamp="20171025 23:21:08.468" level="INFO">Typing text '01/02/2018' into text field 'xpath=//*[@id="TGS_f_departDate"]'</msg>
+<status status="PASS" endtime="20171025 23:21:09.032" starttime="20171025 23:21:08.468"></status>
 </kw>
 <kw name="Press Key" library="ExtendedSelenium2Library">
 <doc>Simulates user pressing key on element identified by `locator`.</doc>
@@ -154,20 +154,20 @@
 <arg>${tbx_departure_date}</arg>
 <arg>\\09</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:09.989" starttime="20171020 16:41:09.941"></status>
+<status status="PASS" endtime="20171025 23:21:09.072" starttime="20171025 23:21:09.032"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:09.989" starttime="20171020 16:41:09.514"></status>
+<status status="PASS" endtime="20171025 23:21:09.072" starttime="20171025 23:21:08.423"></status>
 </kw>
 <kw name="I am returning on date">
 <arguments>
-<arg>01/20/2018</arg>
+<arg>02/02/2018</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${tbx_return_date}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:10.032" starttime="20171020 16:41:09.990"></status>
+<status status="PASS" endtime="20171025 23:21:09.118" starttime="20171025 23:21:09.072"></status>
 </kw>
 <kw name="Input Text" library="ExtendedSelenium2Library">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
@@ -175,8 +175,8 @@
 <arg>${tbx_return_date}</arg>
 <arg>${return_date}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:10.032" level="INFO">Typing text '01/20/2018' into text field 'xpath=//*[@id="TGS_f_returnDate"]'</msg>
-<status status="PASS" endtime="20171020 16:41:10.438" starttime="20171020 16:41:10.032"></status>
+<msg timestamp="20171025 23:21:09.118" level="INFO">Typing text '02/02/2018' into text field 'xpath=//*[@id="TGS_f_returnDate"]'</msg>
+<status status="PASS" endtime="20171025 23:21:09.684" starttime="20171025 23:21:09.118"></status>
 </kw>
 <kw name="Press Key" library="ExtendedSelenium2Library">
 <doc>Simulates user pressing key on element identified by `locator`.</doc>
@@ -184,9 +184,9 @@
 <arg>${tbx_return_date}</arg>
 <arg>\\09</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:10.459" starttime="20171020 16:41:10.438"></status>
+<status status="PASS" endtime="20171025 23:21:09.739" starttime="20171025 23:21:09.684"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:10.459" starttime="20171020 16:41:09.989"></status>
+<status status="PASS" endtime="20171025 23:21:09.739" starttime="20171025 23:21:09.072"></status>
 </kw>
 <kw name="The number of adults are">
 <arguments>
@@ -197,25 +197,7 @@
 <arguments>
 <arg>${lst_adults}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:10.493" starttime="20171020 16:41:10.459"></status>
-</kw>
-<kw name="Get List Items" library="ExtendedSelenium2Library">
-<doc>Returns the values in the select list identified by `locator`.</doc>
-<arguments>
-<arg>${lst_adults}</arg>
-</arguments>
-<assign>
-<var>@{list_items}</var>
-</assign>
-<msg timestamp="20171020 16:41:10.663" level="INFO">@{list_items} = [ 0 | 1 | 2 | 3 | 4 | 5 | 6 ]</msg>
-<status status="PASS" endtime="20171020 16:41:10.663" starttime="20171020 16:41:10.493"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>'@{list_items}'</arg>
-</arguments>
-<status status="PASS" endtime="20171020 16:41:10.664" starttime="20171020 16:41:10.663"></status>
+<status status="PASS" endtime="20171025 23:21:09.786" starttime="20171025 23:21:09.740"></status>
 </kw>
 <kw name="Select From List By Value" library="ExtendedSelenium2Library">
 <doc>Selects ``*values`` from list identified by ``locator``.</doc>
@@ -223,10 +205,10 @@
 <arg>${lst_adults}</arg>
 <arg>${number_of_adults}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:10.665" level="INFO">Selecting value(s) '2' from list 'xpath=//*[@id="TGS_f_cmbAdults"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:10.780" starttime="20171020 16:41:10.664"></status>
+<msg timestamp="20171025 23:21:09.786" level="INFO">Selecting value(s) '2' from list 'xpath=//*[@id="TGS_f_cmbAdults"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:09.999" starttime="20171025 23:21:09.786"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:10.780" starttime="20171020 16:41:10.459"></status>
+<status status="PASS" endtime="20171025 23:21:09.999" starttime="20171025 23:21:09.739"></status>
 </kw>
 <kw name="The number of children are">
 <arguments>
@@ -237,25 +219,7 @@
 <arguments>
 <arg>${lst_children}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:10.833" starttime="20171020 16:41:10.781"></status>
-</kw>
-<kw name="Get List Items" library="ExtendedSelenium2Library">
-<doc>Returns the values in the select list identified by `locator`.</doc>
-<arguments>
-<arg>${lst_children}</arg>
-</arguments>
-<assign>
-<var>@{list_items}</var>
-</assign>
-<msg timestamp="20171020 16:41:10.983" level="INFO">@{list_items} = [ 0 | 1 | 2 | 3 | 4 | 5 | 6 ]</msg>
-<status status="PASS" endtime="20171020 16:41:10.983" starttime="20171020 16:41:10.833"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>'@{list_items}'</arg>
-</arguments>
-<status status="PASS" endtime="20171020 16:41:10.983" starttime="20171020 16:41:10.983"></status>
+<status status="PASS" endtime="20171025 23:21:10.103" starttime="20171025 23:21:09.999"></status>
 </kw>
 <kw name="Select From List By Value" library="ExtendedSelenium2Library">
 <doc>Selects ``*values`` from list identified by ``locator``.</doc>
@@ -263,10 +227,10 @@
 <arg>${lst_children}</arg>
 <arg>${number_of_children}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:10.983" level="INFO">Selecting value(s) '2' from list 'xpath=//*[@id="TGS_f_cmbChildren"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:11.110" starttime="20171020 16:41:10.983"></status>
+<msg timestamp="20171025 23:21:10.104" level="INFO">Selecting value(s) '2' from list 'xpath=//*[@id="TGS_f_cmbChildren"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:10.327" starttime="20171025 23:21:10.103"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:11.110" starttime="20171020 16:41:10.780"></status>
+<status status="PASS" endtime="20171025 23:21:10.327" starttime="20171025 23:21:09.999"></status>
 </kw>
 <kw name="I prefer non-stop">
 <kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
@@ -274,17 +238,17 @@
 <arguments>
 <arg>${cbx_non_stop}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:11.163" starttime="20171020 16:41:11.110"></status>
+<status status="PASS" endtime="20171025 23:21:10.367" starttime="20171025 23:21:10.328"></status>
 </kw>
 <kw name="Select Checkbox" library="ExtendedSelenium2Library">
 <doc>Selects checkbox identified by ``locator``.</doc>
 <arguments>
 <arg>${cbx_non_stop}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:11.163" level="INFO">Selecting checkbox 'xpath=//*[@id="TGS_f_cbNonStop"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:11.204" starttime="20171020 16:41:11.163"></status>
+<msg timestamp="20171025 23:21:10.367" level="INFO">Selecting checkbox 'xpath=//*[@id="TGS_f_cbNonStop"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:10.432" starttime="20171025 23:21:10.367"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:11.204" starttime="20171020 16:41:11.110"></status>
+<status status="PASS" endtime="20171025 23:21:10.433" starttime="20171025 23:21:10.328"></status>
 </kw>
 <kw name="I want airline">
 <arguments>
@@ -295,108 +259,106 @@
 <arguments>
 <arg>${lst_airline}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:11.241" starttime="20171020 16:41:11.204"></status>
-</kw>
-<kw name="Get List Items" library="ExtendedSelenium2Library">
-<doc>Returns the values in the select list identified by `locator`.</doc>
-<arguments>
-<arg>${lst_airline}</arg>
-</arguments>
-<assign>
-<var>@{list_items}</var>
-</assign>
-<msg timestamp="20171020 16:41:15.009" level="INFO">@{list_items} = [ All Airlines | 1time | Aegean Air | Aer Lingus | Aero Continente | Aeroflot | Aerolineas Argen | Aeromexico | Aerosvit Airlines | Air Baltic | Air Berlin | Air Botswana | Air Canada | Air China | AI...</msg>
-<status status="PASS" endtime="20171020 16:41:15.009" starttime="20171020 16:41:11.241"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>'@{list_items}'</arg>
-</arguments>
-<status status="PASS" endtime="20171020 16:41:15.009" starttime="20171020 16:41:15.009"></status>
+<status status="PASS" endtime="20171025 23:21:10.487" starttime="20171025 23:21:10.435"></status>
 </kw>
 <kw name="Select From List" library="ExtendedSelenium2Library">
 <doc>Selects ``*items`` from list identified by ``locator``</doc>
 <arguments>
 <arg>${lst_airline}</arg>
-<arg>${arline}</arg>
+<arg>${airline_item}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:15.009" level="INFO">Selecting option(s) 'American' from list 'xpath=//*[@id="TGS_f_cmbAirlines"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:30.204" starttime="20171020 16:41:15.009"></status>
+<msg timestamp="20171025 23:21:10.488" level="INFO">Selecting option(s) 'American' from list 'xpath=//*[@id="TGS_f_cmbAirlines"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:25.679" starttime="20171025 23:21:10.487"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:30.204" starttime="20171020 16:41:11.204"></status>
+<status status="PASS" endtime="20171025 23:21:25.679" starttime="20171025 23:21:10.434"></status>
 </kw>
 <kw name="I want class">
 <arguments>
-<arg>Business Class</arg>
+<arg>Economy/Coach Class</arg>
 </arguments>
 <kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${lst_class}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:30.253" starttime="20171020 16:41:30.205"></status>
-</kw>
-<kw name="Get List Items" library="ExtendedSelenium2Library">
-<doc>Returns the values in the select list identified by `locator`.</doc>
-<arguments>
-<arg>${lst_class}</arg>
-</arguments>
-<assign>
-<var>@{list_items}</var>
-</assign>
-<msg timestamp="20171020 16:41:30.344" level="INFO">@{list_items} = [ Economy/Coach Class | Business Class | First Class ]</msg>
-<status status="PASS" endtime="20171020 16:41:30.344" starttime="20171020 16:41:30.253"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>'@{list_items}'</arg>
-</arguments>
-<status status="PASS" endtime="20171020 16:41:30.345" starttime="20171020 16:41:30.344"></status>
+<status status="PASS" endtime="20171025 23:21:25.726" starttime="20171025 23:21:25.695"></status>
 </kw>
 <kw name="Select From List" library="ExtendedSelenium2Library">
 <doc>Selects ``*items`` from list identified by ``locator``</doc>
 <arguments>
 <arg>${lst_class}</arg>
-<arg>${class}</arg>
+<arg>${class_item}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:30.345" level="INFO">Selecting option(s) 'Business Class' from list 'xpath=//*[@id="TGS_f_cmbFlightClass"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:45.545" starttime="20171020 16:41:30.345"></status>
+<msg timestamp="20171025 23:21:25.726" level="INFO">Selecting option(s) 'Economy/Coach Class' from list 'xpath=//*[@id="TGS_f_cmbFlightClass"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:40.891" starttime="20171025 23:21:25.726"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:45.546" starttime="20171020 16:41:30.204"></status>
+<status status="PASS" endtime="20171025 23:21:40.892" starttime="20171025 23:21:25.679"></status>
 </kw>
-<kw name="Search for my flight">
+<kw name="Search for flight">
 <kw name="Wait Until Element Is Visible" library="ExtendedSelenium2Library">
 <doc>Waits until element specified with `locator` is visible.</doc>
 <arguments>
 <arg>${btn_search_flight}</arg>
 </arguments>
-<status status="PASS" endtime="20171020 16:41:45.585" starttime="20171020 16:41:45.546"></status>
+<status status="PASS" endtime="20171025 23:21:40.935" starttime="20171025 23:21:40.893"></status>
 </kw>
 <kw name="Click Element" library="ExtendedSelenium2Library">
 <doc>Clicks an element identified by ``locator``.</doc>
 <arguments>
 <arg>${btn_search_flight}</arg>
 </arguments>
-<msg timestamp="20171020 16:41:45.586" level="INFO">Clicking element 'xpath=//*[@id="TGS_f_butSearch"]'.</msg>
-<status status="PASS" endtime="20171020 16:41:49.802" starttime="20171020 16:41:45.586"></status>
+<msg timestamp="20171025 23:21:40.935" level="INFO">Clicking element 'xpath=//*[@id="TGS_f_butSearch"]'.</msg>
+<status status="PASS" endtime="20171025 23:21:43.477" starttime="20171025 23:21:40.935"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:49.802" starttime="20171020 16:41:45.546"></status>
+<kw name="Wait Until Angular Ready" library="ExtendedSelenium2Library">
+<doc>Waits until [https://goo.gl/Kzz8Y3|AngularJS] is ready to process the next request or</doc>
+<status status="PASS" endtime="20171025 23:21:43.526" starttime="20171025 23:21:43.477"></status>
 </kw>
-<status status="PASS" endtime="20171020 16:41:49.802" critical="yes" starttime="20171020 16:40:57.810"></status>
+<status status="PASS" endtime="20171025 23:21:43.526" starttime="20171025 23:21:40.892"></status>
+</kw>
+<kw name="Select Airline">
+<arguments>
+<arg>American</arg>
+</arguments>
+<kw name="Get Matching Xpath Count" library="ExtendedSelenium2Library">
+<doc>Returns number of elements matching `xpath`</doc>
+<arguments>
+<arg>${tbl_flight_search_results}</arg>
+</arguments>
+<assign>
+<var>${number_of_rows}</var>
+</assign>
+<kw name="Capture Page Screenshot" library="ExtendedSelenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20171025 23:21:44.048" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20171025 23:21:44.048" starttime="20171025 23:21:43.593"></status>
+</kw>
+<msg timestamp="20171025 23:21:44.052" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression xpath=//*[@class="flight_matrix_table"]*/table/tbody because of the following error:
+TypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type.
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)
+</msg>
+<status status="FAIL" endtime="20171025 23:21:44.052" starttime="20171025 23:21:43.530"></status>
+</kw>
+<status status="FAIL" endtime="20171025 23:21:44.053" starttime="20171025 23:21:43.530"></status>
+</kw>
+<status status="FAIL" endtime="20171025 23:21:44.054" critical="yes" starttime="20171025 23:20:53.528">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression xpath=//*[@class="flight_matrix_table"]*/table/tbody because of the following error:
+TypeError: Failed to execute 'evaluate' on 'Document': The result is not a node set, and therefore cannot be converted to the desired type.
+  (Session info: chrome=61.0.3163.100)
+  (Driver info: chromedriver=2.32.498550 (9dec58e66c31bcc53a9ce3c7226f0c1c5810906a),platform=Windows NT 10.0.15063 x86_64)
+</status>
 </test>
-<status status="PASS" endtime="20171020 16:41:49.804" starttime="20171020 16:40:57.660"></status>
+<status status="FAIL" endtime="20171025 23:21:44.057" starttime="20171025 23:20:53.305"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Home" pass="1">Home</stat>
+<stat fail="1" id="s1" name="Home" pass="0">Home</stat>
 </suite>
 </statistics>
 <errors>
