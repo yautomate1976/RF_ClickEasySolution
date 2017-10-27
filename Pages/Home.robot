@@ -4,6 +4,7 @@ Library     ExtendedSelenium2Library
 
 *** Variables ***
 ${Browser}  chrome
+${index}    1
 ${rbn_flights}  xpath=//*[@id="TGS_sb_fImg" and @name="TGS_tabButtons"]
 ${rbn_hotels}   xpath=//*[@id="td_TGS_sb_hImg"]
 ${rbn_cruises}  xpath=//*[@id="td_TGS_sb_cImg"]
@@ -30,13 +31,11 @@ ${lst_class}    xpath=//*[@id="TGS_f_cmbFlightClass"]
 ${btn_search_flight}    xpath=//*[@id="TGS_f_butSearch"]
 ${btn_search_flight_hotel}  xpath=//*[@id="TGS_f_butSearch"]
 ${lst_cruise_length}    xpath=//*[@id="TGS_c_cmbCruiseLength"]
-
-
 ${img_american}     xpath=//*[@id="matrixTD2"]/div/div[1]/table/tbody/tr/td/a/img
 ${btn_submit}   xpath=//*[@id="EmailCaptureSubmitButton"]
 ${img_flight_search_results}    xpath=//*[@id="imgHeaderImage"]
 ${tbl_flight_search_results}    xpath=//*[@class="flight_matrix_table"]*/table/tbody
-
+${tbl_flights}   //table[@class="flight_res_table"]
 *** Test Cases ***
 Book a Round Trip Flight
     Launch Easy Click Travel
@@ -52,7 +51,7 @@ Book a Round Trip Flight
     I want class    Economy/Coach Class
     Search for flight
     # Book a flight
-    Select Airline  American
+    Book flight with price less than    $602.00
 
 *** Keywords ***
 
@@ -147,8 +146,12 @@ Search for flight
     click element  ${btn_search_flight}
     wait until angular ready
 
-Select Airline
-    [Arguments]  ${airline_to_select}
-    ${number_of_rows}=  get matching xpath count    ${tbl_flight_search_results}
-    table row should contain    ${tbl_flight_search_results}    1   ${airline_to_select}
-    log to console  ${number_of_rows}
+Book flight with price less than
+    [Arguments]  ${flight_number}
+    ${number_of_flight_tables}=  get matching xpath count    ${tbl_flights}
+    log to console  ${number_of_flight_tables}
+    run keyword if  ${number_of_flight_tables} > 0  run keywords
+        :FOR    ${index}    IN  RANGE   1   ${number_of_flight_tables}
+        \   log to console  1
+        \   log to console  2
+        \   log to console  3
